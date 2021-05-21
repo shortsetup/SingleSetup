@@ -179,53 +179,15 @@ chsh -s zsh
 
 cd $Home
 
-mv termux-ohmyzsh $HOME/theme
+rm -rf termux-ohmyzsh 
 
-cd $HOME/theme
+mkdir theme
 
-rm -rf install.sh
-rm -rf LICENSE
-rm -rf README.md
-rm -rf update.sh
-touch install.sh
+cd $HOME/SingleSetup 
 
-cd /data/data/com.termux/files/usr/etc
+mv zshrc $HOME/theme
 
-echo  "$HOME/.termux/colors.sh
-" > a.txt
-
-echo  "$HOME/.termux/fonts.sh" > b.txt
-
-echo  "cd /data/data/com.termux/files/usr/etc" > 1.txt
-
-echo  "rm -rf motd" > 2.txt
-
-echo  "touch motd" > 3.txt
-
-echo  "echo  "������Welcome to Termux!������" > motd
-" > 4.txt
-
-echo  "echo "figlet Neon" > fg.txt" > 5.txt
-
-echo  "cat "fg.txt" >> /data/data/com.termux/files/usr/etc/zshrc" > 6.txt
-
-cat "a.txt" >> /$HOME/theme/install.sh
-cat "b.txt" >> /$HOME/theme/install.sh
-cat "1.txt" >> /$HOME/theme/install.sh
-cat "2.txt" >> /$HOME/theme/install.sh
-cat "3.txt" >> /$HOME/theme/install.sh
-cat "4.txt" >> /$HOME/theme/install.sh
-cat "5.txt" >> /$HOME/theme/install.sh
-cat "6.txt" >> /$HOME/theme/install.sh
-
-rm -rf a.txt
-rm -rf b.txt
-rm -rf 1.txt
-rm -rf 2.txt
-rm -rf 3.txt
-rm -rf 4.txt
-rm -rf 5.txt
-rm -rf 6.txt
+mv i.sh $HOME/theme
 
 
 echo "Please restart Termux app..."
